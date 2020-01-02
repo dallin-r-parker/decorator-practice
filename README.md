@@ -1,27 +1,23 @@
-# TSDX Bootstrap
+# Learning about Typescript Decorators
 
-This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
+## Reference: [The Magic of Typescript Decorators](https://www.youtube.com/watch?v=O6A-u_FoEX8)
 
-## Local Development
+### What can be "decoratored" in Typescript
+- Class Definitions
+- Properties
+- Methods
+- Accessors
+- Parameters
 
-Below is a list of commands you will probably find useful.
+### Examples of how to impliment decorators for each of these are inside of src with a matching directory name.
 
-### `npm start` or `yarn start`
+> ## The function that you implement be dependant on the 'thing' you're decorating, in other words the function arguments required to decorate a class will be different than the arguments required for decorating a method
 
-Runs the project in development/watch mode. Your project will be rebuilt upon changes. TSDX has a special logger for you convenience. Error messages are pretty printed and formatted for compatibility VS Code's Problems tab.
+# Notes
+## Class Definitions
 
-<img src="https://user-images.githubusercontent.com/4060187/52168303-574d3a00-26f6-11e9-9f3b-71dbec9ebfcb.gif" width="600" />
+Example: `src > class-definition`
+We're creating a `@Frozen` decorator that makes it so a class can't be extended.
+When you're extending a class with inheritance, be careful with __Decorator__ because the __inherited class WON'T__  actually receive the functionality of the __Decorator__.
 
-Your library will be rebuilt if you make edits.
-
-### `npm run build` or `yarn build`
-
-Bundles the package to the `dist` folder.
-The package is optimized and bundled with Rollup into multiple formats (CommonJS, UMD, and ES Module).
-
-<img src="https://user-images.githubusercontent.com/4060187/52168322-a98e5b00-26f6-11e9-8cf6-222d716b75ef.gif" width="600" />
-
-### `npm test` or `yarn test`
-
-Runs the test watcher (Jest) in an interactive mode.
-By default, runs tests related to files changed since the last commit.
+The example freezes the __Class Definition__ so if a __new instance__ of the class is created it would not be frozen, so the __MAIN__ purpose of the the decorator is to prevent a class from being treated as a __superclass__
