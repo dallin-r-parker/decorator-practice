@@ -1,9 +1,9 @@
-import { Frozen } from "./decorator";
+import { Frozen } from './decorator';
 
 @Frozen
 export default class Employee {
-  public name:string;
-  public age:number;
+  public name: string;
+  public age: number;
 
   constructor(name: string, age: number) {
     this.name = name;
@@ -13,7 +13,7 @@ export default class Employee {
 
 console.log(`Is Employee extendable?: `, Object.isFrozen(Employee));
 
-class Company extends Employee {
-  // this would created an error cause the "@Frozen"
-  // decorator is making the constructor "readonly"
-}
+// class Company extends Employee {
+// this would created an error cause the "@Frozen"
+// decorator is making the constructor "readonly"
+// }
