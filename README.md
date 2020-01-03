@@ -40,3 +40,7 @@ The Method decorator takes three arguments: `target: Object`, `key: string | sym
 > ### __Target:__ the parent class <br>
 > ### __Key:__ the name of the function <br>
 > ### __Descriptor:__ is the actual function itself. <br>
+
+## Accessor
+Example: `src > methods` <br>
+An accessor is defined as a "getter" or "setter" with "getters" you can't pass in arguments, so with a decorator we can fix this.
