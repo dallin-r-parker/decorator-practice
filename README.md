@@ -30,4 +30,13 @@ Using the factory pattern, which is just a function that returns the decorator. 
 > ### __Target:__ the parent class <br>
 > ### __Key:__ the property that will be decorated
 
+## Methods
+Example: `src > methods` <br>
+We're creating a `@Confirmable` decorator that allows for the functionality of having the user confirm that "toppings" being added. <br>
+__Decorators are composable__ so we can stack them on top of eachother and they'll be applied from ***Top to Bottom*** <br>
+We're using the Factory Pattern again, but this time we're setting it up to accept custom data. <br>
+The Method decorator takes three arguments: `target: Object`, `key: string | symbol` and `descriptor: PropertyDescriptor`.
 
+> ### __Target:__ the parent class <br>
+> ### __Key:__ the name of the function <br>
+> ### __Descriptor:__ is the actual function itself. <br>
